@@ -8,6 +8,8 @@ $(document).ready(function() {
     const nhlContainerVersion1 = document.getElementById('nhl_container_version1')
     const nhlContainerVersion2 = document.getElementById('nhl_container_version2')
 
+    const fullscreenButton = document.getElementById('fullscreen');
+
     const themes = ['light', 'dark', 'stendenLight', 'stendenDark', 'stendenDefault']
     let currentTheme = themes.length - 1
 
@@ -24,6 +26,15 @@ $(document).ready(function() {
         document.documentElement.className = themes[currentTheme]
         // console.log(themes[currentTheme])
 
+    })
+
+    fullscreenButton.addEventListener('click', function () {
+
+        if (document.fullscreenElement) {
+            document.exitFullscreen()
+        } else {
+            document.documentElement.requestFullscreen()
+        }
     })
 
     containerButton.addEventListener('click', function () {
