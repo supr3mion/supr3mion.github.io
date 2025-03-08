@@ -1,0 +1,165 @@
+
+@font-face {
+    font-family: 'Cera';
+    font-weight: 400;
+    font-style: normal;
+    src: url("./assets/CeraPRO-Medium.woff2") format('woff2');
+}
+
+* {
+    transition: background-color .5s;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--bg-color);
+    /*transition: background-color .5s;*/
+}
+
+#themeButton {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    overflow: hidden;
+    display: flex;
+}
+
+#container_button {
+    width: 60px;
+    height: 30px;
+    border: 5px solid var(--logo-color);
+    border-radius: 10px;
+    position: absolute;
+    right: 1%;
+    top: 8%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+#themeButton #primary {
+    background-color: var(--bg-color);
+    border-left: 5px solid var(--logo-color);
+    border-top: 5px solid var(--logo-color);
+    border-bottom: 5px solid var(--logo-color);
+    border-radius: 10px 0 0 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#themeButton #secondary {
+    background-color: var(--logo-color);
+    border-right: 5px solid var(--bg-color);
+    border-top: 5px solid var(--bg-color);
+    border-bottom: 5px solid var(--bg-color);
+    border-radius: 0 10px 10px 0 ;
+    width: 30px;
+    height: 30px;
+}
+
+:root,
+:root.stendenDefault {
+    --bg-color: #005aa7;
+    --logo-color: #FFFFFF;
+}
+:root.stendenDark {
+    --bg-color: #121212;
+    --logo-color: #005aa7;
+}
+:root.stendenLight {
+    --bg-color: #FFFFFF;
+    --logo-color: #005aa7;
+}
+:root.dark {
+    --bg-color: #121212;
+    --logo-color: #FFFFFF;
+}
+:root.light {
+    --bg-color: #FFFFFF;
+    --logo-color: #121212;
+}
+
+/*start of version 1*/
+
+#nhl_container_version1 {
+    display: grid;
+    grid-template-rows: fit-content(100%);
+    grid-template-columns: fit-content(100%);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    height: 60%;
+    max-height: 700px;
+}
+
+#nhl_container_version1 #subject {
+    width: 100%;
+    height: 100%;
+    font-family: Cera, serif;
+    color: var(--logo-color);
+}
+
+#nhl_container_version1 #nhl_logo {
+    color: var(--logo-color);
+    height: 100%;
+    max-height: 700px;
+    margin-left: 4px;
+}
+
+/*end of version 1*/
+
+
+/*start of version 2*/
+
+#nhl_container_version2 {
+    display: grid;
+    /*grid-template-rows: fit-content(100%);*/
+    grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%);
+    position: absolute;
+    /*top: 50%;*/
+    bottom: 8%;
+    left: 2%;
+    /*transform: translateY(-80%);*/
+    height: 15%;
+    max-height: 300px;
+}
+
+#nhl_container_version2 #spacer {
+    width: 3px;
+    height: 100%;
+    background-color: var(--logo-color);
+    border-radius: 5px;
+    margin: 0 20px 0 20px;
+}
+
+#nhl_container_version2 #subject {
+    width: 100%;
+    height: 100%;
+    font-family: Cera, serif;
+    color: var(--logo-color);
+}
+
+#nhl_container_version2 #nhl_logo {
+    color: var(--logo-color);
+    height: 100%;
+    max-height: 700px;
+}
+
+/*end of version 2*/
+
+#svg_container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+}
+
+#svg_container div {
+    grid-template-columns: repeat(15, fit-content(1%));
+    align-items: center;
+}
