@@ -10,6 +10,8 @@ $(document).ready(function() {
 
     const fullscreenButton = document.getElementById('fullscreen');
 
+    const directions2 = document.getElementById('directions2')
+
     const themes = ['light', 'dark', 'stendenLight', 'stendenDark', 'stendenDefault']
     let currentTheme = themes.length - 1
 
@@ -45,12 +47,14 @@ $(document).ready(function() {
                 nhlContainerVersion1.style.display = "none"
                 nhlContainerVersion2.style.display = "grid"
                 currentContainer = 2
+                directions2.style.display = "flex"
                 break;
 
             case 2:
                 nhlContainerVersion1.style.display = "grid"
                 nhlContainerVersion2.style.display = "none"
                 currentContainer = 1
+                directions2.style.display = "none"
                 break;
 
         }
